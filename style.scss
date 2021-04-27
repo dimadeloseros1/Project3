@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin circle($radius: 150px, $bgcolor: grey, $hovercolor: yellow ) {
+    height: $radius;
+    width: $radius;
+    border-radius: $radius / 2;
+    background-color: $bgcolor;
+    margin: 1%;
+    &:hover{
+        background-color: $hovercolor;
+    }
+
+    
+}
+
+body {
+   .div1 {
+       @include circle(100px, red )
+       
+   }
+   .div2 {
+       @include circle(200px, green )
+       
+   }
+   .div3 {
+       @include circle($hovercolor: green )
+   }
+
+}
+
+ 
+  
+
