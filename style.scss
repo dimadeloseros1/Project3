@@ -10,9 +10,12 @@ html, body {
 
 * {
   box-sizing: border-box;
+ 
 }
-
-@mixin circle($radius: 150px, $bgcolor: grey, $hovercolor: yellow ) {
+$color: grey;
+$parameters: 100px;
+// mixins
+@mixin circle($radius: 150px, $bgcolor: blue, $hovercolor: yellow ) {
     height: $radius;
     width: $radius;
     border-radius: $radius / 2;
@@ -20,14 +23,82 @@ html, body {
     margin: 1%;
     &:hover{
         background-color: $hovercolor;
+    }   
+}
+@mixin cube($cradius:6rem, $mxcolor: orange, $hoovercolor: brown ){
+    height: 100px;
+    width: $cradius;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    
+    
+    &:hover{
+        background-color:grey;
+        color: white;
     }
 
-    
 }
-
 body {
+
+   .header{
+       padding: 0%;
+       
+     &__item{
+         display: block;
+         height: 80%;
+         width: 100%;
+         background-color: blueviolet;
+         
+     }
+     &__item--second{
+         background-color: cadetblue;
+     }
+     &__item--active{
+         height: $parameters;
+         width: $parameters;
+         background-color: $color;
+         border-radius: $parameters;
+         margin: 10px;
+         
+     }
+   }
+
+   .nav{
+       display: flex;
+       gap: 10%;
+       justify-content: center;
+   
+        &__item--first{
+            @include cube() 
+            
+            
+            
+            
+        }
+        &__item--secondd{
+            @include cube($hoovercolor: grey, border-radius 50px)
+    }
+        &__item--third{
+            @include cube(text-align center )
+            
+            
+            
+        }
+
+   }
+
+
+
+
+
+
    .div1 {
-       @include circle(100px, red )
+       @include circle(100px, grey )
        
    }
    .div2 {
