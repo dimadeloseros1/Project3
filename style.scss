@@ -12,9 +12,17 @@ html, body {
   box-sizing: border-box;
  
 }
+// variables
+$backcolor: #2542;
 $color: grey;
 $parameters: 100px;
-// mixins
+$ball-size: 9rem;
+//email variables
+$cd-txt: #6300a0;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+$cd-btn-end: rgba(1, 28, 55, 1);
+
 @mixin circle($radius: 150px, $bgcolor: blue, $hovercolor: yellow ) {
     height: $radius;
     width: $radius;
@@ -34,39 +42,72 @@ $parameters: 100px;
     justify-content: center;
     
     
-    
-    
-    
     &:hover{
-        background-color:grey;
+        background-color: $hoovercolor;
         color: white;
+        
     }
 
 }
-body {
+
+
+ 
+ body {
+    .container{
+
+        .form{
+            &__group{
+                & input{
+                    
+                    border-radius: 100rem;
+                    color: $cd-txt;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 2rem;
+                    outline: none;
+                    padding: .5rem 1.5rem;
+                    width: 28%;
+                    transition: background-color 500ms;
+                    &:focus{
+                        border: 2px solid $cd-txt;
+                    }
+                    &:not(:focus):invalid{
+                        background: $cd-danger;
+                        border: 2px solid $cd-danger;
+                        color: $cd-txt--invalid;
+                    }
+                }
+            }
+        }
+    }
+     
 
    .header{
        padding: 0%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
        
+        
      &__item{
-         display: block;
          height: 80%;
          width: 100%;
-         background-color: blueviolet;
+         
          
      }
      &__item--second{
-         background-color: cadetblue;
+        background: set-text-color($backcolor);
+        color: #232;
      }
      &__item--active{
          height: $parameters;
          width: $parameters;
-         background-color: $color;
+         background-color: transparentize($color, 0.3);
          border-radius: $parameters;
          margin: 10px;
          
      }
-   }
+    }
 
    .nav{
        display: flex;
@@ -81,16 +122,92 @@ body {
             
         }
         &__item--secondd{
-            @include cube($hoovercolor: grey, border-radius 50px)
-    }
+            @include cube($hoovercolor: green) 
+            
+            
+        }
         &__item--third{
-            @include cube(text-align center )
+            @include cube(text-align center  )
+            
+            
             
             
             
         }
+        $cd-btn: #771;
+        $cd-txt: #819;
 
-   }
+        .btn {
+            background: $cd-btn;
+            color: $cd-txt;
+            font-size: 3rem;
+            cursor: pointer;
+            padding: 2.5rem 3rem;
+            margin: 1rem;
+            border-radius: 10rem; 
+            transform: scale(1);
+            position: relative;
+            transition: transform 4500ms, background-color 3000ms 1s;
+            
+            &:hover{
+                transform: scale(1.15);
+                background-color: $cd-btn-end;
+                color: #fff;
+                transform: rotate(180deg);
+            }
+        
+        }
+        .ball{
+            width: $ball-size;
+            height: $ball-size;
+            background: $cd-btn;
+            border-radius: $ball-size * 0.5;
+            transform: translateY(20rem);
+            transition: transform 5000ms linear;
+            &:hover{
+                transform: translateZ(500px);
+                background: green;
+                transform: rotate(180deg);
+                
+            }
+           
+        }
+        .selector{
+            height: 100px;
+            width: 100px;
+            background-color: $cd-btn;
+            transform: translateY(29rem);
+            transition: transform 3s cubic-bezier(.11,.99,.78,-0.74);
+            color: red;
+            &:hover {
+                transform: translateX(183px);
+                border-radius: 50%;
+                transition: 6s;
+                background: red;
+                transform: rotate(180deg);
+                height: 300px;
+                width: 300px;
+            }
+        }
+        
+        .testing{
+            height: 100px;
+            width: 100px;
+            background-color: $cd-btn;
+            color: $cd-danger;
+        }
+        .div1{
+            background-color: chartreuse;
+            height: 100px;
+            width: 100px;
+        }
+        
+        
+        
+   
+
+
+
 
 
 
@@ -102,7 +219,7 @@ body {
        
    }
    .div2 {
-       @include circle(200px, green )
+       @include circle(200px, green, $hovercolor: pink )
        
    }
    .div3 {
@@ -111,6 +228,11 @@ body {
 
 }
 
- 
-  
-
+@function set-text-color($backcolor){
+    @if lightness($backcolor) < 70% {
+        @return lighten($backcolor, 70%);
+    } @else {
+        @return darken($backcolor, 70%)
+    }
+}
+ }
