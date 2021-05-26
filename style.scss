@@ -15,6 +15,12 @@ html, body {
   box-sizing: border-box;
  
 }
+.logo {
+  display: grid;
+  justify-content: center;
+  margin: 1.2rem 0rem;
+  
+}
 //**nav**//
 .nav__bar {
   &--options{
@@ -32,6 +38,9 @@ html, body {
     @include img--size();
   }
 }
+//img on the x4 pages//
 .main__img img {
-    @include img--size();
+    height: 100%;
+    width: 100%;
+    
 }

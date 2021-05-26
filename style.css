@@ -11,6 +11,12 @@ html, body {
   box-sizing: border-box;
 }
 
+.logo {
+  display: grid;
+  justify-content: center;
+  margin: 1.2rem 0rem;
+}
+
 .nav__bar--options {
   display: grid;
   grid-template-columns: repeat(3, 2.5rem);
@@ -26,6 +32,6 @@ html, body {
 }
 
 .main__img img {
-  height: 85%;
-  width: 85%;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
