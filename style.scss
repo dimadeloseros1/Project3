@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
 @import "scss/variables";
 @import "scss/mixins";
+
 html, body {
   font-family: sans-serif;
   
@@ -28,7 +29,9 @@ html, body {
 //**img size**//
 .main__menu {
   &--mod img {
-    height: 85%;
-    width: 85%;
+    @include img--size();
   }
+}
+.main__img img {
+    @include img--size();
 }

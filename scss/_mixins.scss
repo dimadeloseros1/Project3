@@ -5,3 +5,7 @@
     background-color: cadetblue;
     margin: 2%;
 }
+@mixin img--size {
+    height: 85%;
+    width: 85%;
+}
