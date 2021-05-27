@@ -13,8 +13,13 @@ html, body {
 
 .logo {
   display: grid;
-  justify-content: center;
-  margin: 1.2rem 0rem;
+  grid-template-columns: 7rem 7rem;
+  grid-gap: 5%;
+  padding: 4%;
+}
+
+.fa-arrow-left {
+  font-size: 2rem;
 }
 
 .nav__bar--options {
