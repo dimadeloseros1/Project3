@@ -15,29 +15,121 @@ html, body {
   box-sizing: border-box;
  
 }
+//Header//
 .logo {
   display: grid;
-  grid-template-columns: 7rem 7rem;
+  grid-template-columns: 7rem 3rem;
+  justify-content: center;
   grid-gap: 5%;
   padding: 4%;
-  
-  
+}
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  white-space: nowrap;
+  font-weight: 700;
+  background: linear-gradient(180deg, #a7a7a7 0%, #e2e2e2 15%);
   
   
 }
 .fa-arrow-left {
   font-size: 2rem;
 }
-//**nav**//
-.nav__bar {
-  &--options{
+.header__first{
+  background: darken($color: #fff, $amount: 5%);
+  padding: 20px;
+   &--mod {
+   display: flex;
+   font-size: 1.1rem;
+   font-weight: bold;
+   justify-content: center;
+   position: relative;
+   
+   
+    h1 {
+      margin: 5% 10%;
+      
+    }
+    
+  }
+  &--moder {
     display: grid;
-    grid-template-columns: repeat(3, 2.5rem);
-    align-items: center;
-    border: 4px solid yellowgreen;
-    margin: 1%;
-  white-space: nowrap;
+    justify-content: center;
+    color: lighten($color: #000000, $amount: 50%);
+      
+  }
+  .header__button {
+    display: grid;
+    justify-content: center;
+     
+    &--mod {
+      @include button();
+      background: linear-gradient($colors 40%, $colorp 100%);
+      font-size: 100%;
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 2px 4px 2px #7e7e7e;
+      }
+    }
+  }
 }
+
+
+
+//**nav**//
+nav {
+  >h1{
+    margin: 20px;
+  }
+}
+.nav__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+  
+  
+  
+  &--options{
+    @include navbars ();
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    box-shadow: 5px 5px 10px 0 rgb(128, 122, 122);
+    gap: 7%;
+    &:hover {
+      transform: translate(1.5rem);
+      transition: transform 1s;
+      box-shadow: 5px 8px 8px 0 #7e7e7e,0 6px 20px 0 #eaeaea;;
+      background-color: lighten($colors, 24%,);
+      >i {
+        transform: rotate(60deg);
+        transition: transform 1s;
+        color: $colorp
+      }
+    }
+    
+    
+    
+    
+
+     .nav__bar--numbers {
+       background: $colorp;
+       border-radius: 10px;
+       width: 22px;
+       text-align: center;
+       color: #fff;
+       margin: -5px;
+       
+       
+       
+       
+     }
+  }
 }
 //**img size**//
 .main__menu {
@@ -45,9 +137,50 @@ html, body {
     @include img--size();
   }
 }
+
 //img on the x4 pages//
 .main__img img {
     height: 100%;
     width: 100%;
+} 
+
+.main {
+  background: darken($color: #fff, $amount: 5%);
+  
+  &__menu {
+    display: grid;
     
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    border: 2px thin;
+    background: rgb(245, 243, 243);
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 90%;
+    >h2 + p {
+      margin: 20px;
+      font-weight: bold;
+    }
+   
+    
+  }
+}
+
+footer {
+  background: darken($color: #fff, $amount: 70%);
+  color: #fff;
+  margin: 40px 0px;
+  .footer {
+    font-size: 1.1rem;
+    margin: 10px;
+    &__contacts {
+      display: flex;
+      gap: 2%;
+      justify-content: left;
+      >i {
+        margin-top: 17px;
+      }
+    }
+  }
 }
