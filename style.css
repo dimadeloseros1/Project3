@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,900i");
+@-webkit-keyframes yame {
+  0% {
+    transform: translate(40rem) scale(0);
+    transition: transform 1s;
+  }
+  50% {
+    transform: translate(0rem) scale(1);
+    transition: transform 1s;
+  }
+}
+@keyframes yame {
+  0% {
+    transform: translate(40rem) scale(0);
+    transition: transform 1s;
+  }
+  50% {
+    transform: translate(0rem) scale(1);
+    transition: transform 1s;
+  }
+}
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  85% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  85% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
 html, body {
   font-family: sans-serif;
   font-style: italic;
@@ -82,6 +140,13 @@ nav > h1 {
   cursor: pointer;
   position: relative;
 }
+@media screen and (min-width: 1200px) {
+  .nav__bar {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+}
 .nav__bar--options {
   align-items: center;
   border: 2px thin;
@@ -93,7 +158,7 @@ nav > h1 {
   font-weight: bold;
   font-size: 1.1rem;
   width: 20rem;
-  display: inline-flex;
+  display: flex;
   height: 70%;
   box-shadow: 5px 5px 10px 0 #807a7a;
   gap: 7%;
@@ -132,8 +197,19 @@ nav > h1 {
   width: 100%;
 }
 
+.rest {
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   background: #f2f2f2;
+}
+@media screen and (min-width: 600px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .main__menu {
   box-shadow: 0 4px 8px 0 #7e7e7e, 0 6px 20px 0 #eaeaea;
@@ -241,7 +317,7 @@ footer .footer__contacts > i {
 .main__div .heart {
   font-size: 2rem;
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 20% auto;
   justify-content: flex-end;
   align-items: flex-start;
 }
@@ -261,38 +337,89 @@ footer .footer__contacts > i {
   transition: transform 1s ease-in-out;
   transform: scale(1);
 }
-
-.main__img {
+.main__div .main__img {
   width: 100%;
   height: 400px;
 }
-
-.first--menu {
+@media screen and (max-width: 600px) {
+  .main__div .main__img {
+    height: 50%;
+    display: flex;
+  }
+}
+.main__div .first--menu {
   background: #fff;
   border: 2px thin;
   display: grid;
   padding: 1px;
   margin: 2%;
   border-radius: 2rem;
+  -webkit-animation: yame 1s;
+          animation: yame 1s;
+  transition: 1s;
 }
-.first--menu--text {
+.main__div .first--menu .circle {
+  color: #fff;
+  background-color: #99E2D0;
+  font-size: 150%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 53px;
+  transform: translateX(0) scaleX(0);
+  transition: 1s;
+  right: 0px;
+  position: absolute;
+  opacity: 5;
+}
+.main__div .first--menu--text {
+  display: grid;
+  grid-template-columns: repeat(auto, 7rem);
+  transition: 1s;
   margin: 10px;
 }
-
-#price {
+.main__div .first--menu--text:hover .circle {
+  transform: translateX(-40px) scaleX(1);
+  transition: 1s;
+}
+.main__div .first--menu--text:hover .check__icon {
+  transform: rotate(360deg);
+  transition-duration: 1000ms;
+}
+.main__div .first--menu--text:hover #price {
+  transform: translate(-180px);
+  transition: 1s;
+}
+.main__div #price {
   display: grid;
   justify-content: flex-end;
+  position: relative;
+  bottom: 50px;
 }
-
-h4::after {
+.main__div h4::after {
   content: "";
   border: 2px solid #99E2D0;
-  font-size: 2%;
+  font-size: 4%;
   display: block;
   width: 2.3rem;
 }
-
-.footer1 {
+.main__div .orderb {
+  height: 3rem;
+  width: 14rem;
+  border: thin;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(#ff79da 40%, #9356DC 100%);
+  font-size: 100%;
+  transition: 1s ease-in;
+  margin-left: 25%;
+  z-index: 0;
+}
+.main__div .orderb:hover {
+  transform: scale(1.2);
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.main__div .footer1 {
   padding: 2%;
   position: relative;
 }/*# sourceMappingURL=style.css.map */
