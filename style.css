@@ -505,16 +505,16 @@ footer .footer__contacts > i {
   background: linear-gradient(#ff79da 40%, #9356DC 100%);
   font-size: 100%;
   transition: 1s ease-in;
-  margin-left: 40%;
+  margin-left: 45%;
   z-index: 0;
 }
 .main__div .orderb:hover {
   transform: scale(1.2);
   transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .main__div .orderb {
-    margin-left: 15%;
+    margin-left: 25%;
   }
 }
 .main__div .first--menu:nth-child(1) {
