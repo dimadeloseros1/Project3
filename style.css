@@ -300,6 +300,7 @@ nav > h1 {
   height: 300px;
   margin: auto;
   margin-bottom: 30px;
+  padding: 0%;
 }
 .main .new {
   position: absolute;
