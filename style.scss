@@ -390,7 +390,7 @@ footer {
   background: #fff;
   border: 2px thin;
   display: grid;
-  padding: 1px;
+  
   margin: 2%;
   border-radius: 2rem;
   animation: FadeIn 800ms;
@@ -456,6 +456,12 @@ footer {
     
    }
   
+  &p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   }
 }
   
@@ -492,22 +498,11 @@ h4::after {
      margin-left: 25% ;
    }
  }
- .first--menu:nth-child(1){ animation-delay: .4s;}
- .first--menu:nth-child(2){ animation-delay: .6s;}
- .first--menu:nth-child(3){ animation-delay: .8s;}
- .first--menu:nth-child(4){ animation-delay: 1s;}
- .first--menu:nth-child(5){ animation-delay:  1.2s;}
- .first--menu:nth-child(6){ animation-delay: 1.4s;}
- .first--menu:nth-child(7){ animation-delay: 1.6s;}
- .first--menu:nth-child(8){ animation-delay: 1.8s;}
- .first--menu:nth-child(9){ animation-delay: 2s;}
- .first--menu:nth-child(10){ animation-delay: 2.2s;}
- .first--menu:nth-child(11){ animation-delay: 2.4s;}
- .first--menu:nth-child(12){ animation-delay: 2.6s;}
- .first--menu:nth-child(13){ animation-delay: 2.8s;}
- .first--menu:nth-child(14){ animation-delay: 3s;}
-
-
+ @for $i from 1 through 14 {
+  .first--menu:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.5}s;
+  }
+}
 .footer1{
   padding: 2%;
   position: relative;
