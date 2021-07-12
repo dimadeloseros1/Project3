@@ -89,7 +89,8 @@
     transform: scale(1);
   }
 }
-html, body {
+html,
+body {
   font-family: sans-serif;
   font-style: italic;
   height: 100%;
@@ -300,7 +301,6 @@ nav > h1 {
   height: 300px;
   margin: auto;
   margin-bottom: 30px;
-  padding: 0%;
 }
 .main .new {
   position: absolute;
@@ -437,7 +437,6 @@ footer .footer__contacts > i {
 .main__div .first--menu {
   background: #fff;
   border: 2px thin;
-  display: grid;
   margin: 2%;
   border-radius: 2rem;
   -webkit-animation: FadeIn 800ms;
@@ -445,53 +444,87 @@ footer .footer__contacts > i {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   transition: 1s;
-  overflow: hidden;
   box-shadow: 3px 3px 14px 0px #a7a7a7;
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.main__div .first--menu .dish--description {
+  padding: 10px;
+  width: 78%;
+  transition: width 1s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main__div .first--menu .dish--description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main__div .first--menu .circle {
+  color: #fff;
+  background-color: #99e2d0;
+  font-size: 150%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 23px;
+  transition: all 1000ms ease 0ms;
+  transform: translateX(70px);
+  position: relative;
+  right: 0;
+  overflow: hidden;
+}
+.main__div .first--menu .circle::before {
+  content: "";
+  transition: ease-in-out 1s;
+}
+.main__div .first--menu--text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 0;
+  transition: 1s;
+}
+.main__div .first--menu--text:hover .dish--description {
+  width: calc(75%);
+  position: relative;
+}
+.main__div .first--menu--text:hover .circle {
+  transform: translateX(2px);
+  transition: flex all 1s ease-in-out;
+  display: block;
+  width: 80px;
   color: #fff;
   background-color: #99E2D0;
   font-size: 150%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 55px;
-  transform: translateX(140px);
-  transition: all 1000ms ease 0ms;
-  right: 0px;
-  position: absolute;
   opacity: 5;
-}
-.main__div .first--menu--text {
-  display: grid;
-  grid-template-columns: repeat(auto, 7rem);
-  padding: 10px;
-  transition: 1s;
-  overflow: hidden;
+  height: 100px;
   position: relative;
-}
-.main__div .first--menu--text:hover .circle {
-  transform: translateX(2px);
-  transition: 1s;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__div .first--menu--text:hover .check__icon {
   transform: rotate(360deg);
   transition-duration: 1000ms;
 }
-.main__div .first--menu--text:hover #price {
-  transform: translate(-180px);
+.main__div .first--menu--text:hover .price {
   transition: 1s;
+  transform: translateX(1px);
 }
-.main__div .first--menu--textp {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.main__div #price {
-  display: grid;
-  justify-content: flex-end;
-  position: relative;
-  bottom: 50px;
-  transition: all 1000ms ease;
+.main__div .price {
+  font-weight: bold;
+  transition: 1s;
+  transform: translateX(65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__div h4::after {
   content: "";
@@ -523,60 +556,60 @@ footer .footer__contacts > i {
   }
 }
 .main__div .first--menu:nth-child(1n) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .main__div .first--menu:nth-child(2n) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 .main__div .first--menu:nth-child(3n) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 .main__div .first--menu:nth-child(4n) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.main__div .first--menu:nth-child(5n) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-.main__div .first--menu:nth-child(5n) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
 .main__div .first--menu:nth-child(6n) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
 }
 .main__div .first--menu:nth-child(7n) {
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 .main__div .first--menu:nth-child(8n) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.main__div .first--menu:nth-child(9n) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.main__div .first--menu:nth-child(10n) {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
-.main__div .first--menu:nth-child(9n) {
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
-}
-.main__div .first--menu:nth-child(10n) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
 .main__div .first--menu:nth-child(11n) {
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
 }
 .main__div .first--menu:nth-child(12n) {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
 }
 .main__div .first--menu:nth-child(13n) {
-  -webkit-animation-delay: 6.5s;
-          animation-delay: 6.5s;
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s;
 }
 .main__div .first--menu:nth-child(14n) {
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
 }
 .main__div .footer1 {
   padding: 2%;
