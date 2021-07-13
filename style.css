@@ -359,22 +359,16 @@ footer #con {
   color: #fff;
 }
 footer .footer {
-  font-size: 1.1rem;
-  margin: 50px;
+  font-size: 1.5rem;
+  margin: 20px;
 }
 footer .footer__contacts {
   display: flex;
-  gap: 2%;
+  gap: 1%;
   justify-content: left;
 }
 footer .footer__contacts > i {
   margin-top: 17px;
-}
-@media screen and (min-width: 600px) {
-  footer .footer {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .logo1 {
@@ -496,7 +490,7 @@ footer .footer__contacts > i {
 }
 .main__div .first--menu--text:hover .circle {
   transform: translateX(2px);
-  transition: flex all 1s ease-in-out;
+  transition: 1s;
   display: block;
   width: 80px;
   color: #fff;
@@ -504,7 +498,7 @@ footer .footer__contacts > i {
   font-size: 150%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  opacity: 5;
+  opacity: 1;
   height: 100px;
   position: relative;
   right: 0px;

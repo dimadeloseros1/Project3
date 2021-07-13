@@ -289,12 +289,12 @@ footer {
   }
 
   .footer {
-    font-size: 1.1rem;
-    margin: 50px;
+    font-size: 1.5rem;
+    margin: 20px;
 
     &__contacts {
       display: flex;
-      gap: 2%;
+      gap: 1%;
       justify-content: left;
 
 
@@ -305,10 +305,7 @@ footer {
 
     }
 
-    @media screen and (min-width: 600px) {
-      display: flex;
-      justify-content: center;
-    }
+    
   }
 }
 
@@ -444,7 +441,7 @@ footer {
 
         .circle {
           transform: translateX(2px);
-          transition:  flex all 1s ease-in-out;
+          transition: 1s;
           display: block;
           width: 80px;
           
@@ -453,7 +450,7 @@ footer {
           font-size: 150%;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-          opacity: 5;
+          opacity: 1;
           height: 100px;
           position: relative;
           right: 0px;
