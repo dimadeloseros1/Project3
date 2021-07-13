@@ -471,11 +471,13 @@ footer .footer__contacts > i {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 23px;
-  transition: all 1000ms ease 0ms;
+  transition: all 1000ms;
   transform: translateX(70px);
   position: relative;
-  right: 0;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main__div .first--menu .circle::before {
   content: "";
@@ -489,7 +491,7 @@ footer .footer__contacts > i {
   transition: 1s;
 }
 .main__div .first--menu--text:hover .dish--description {
-  width: calc(75%);
+  width: calc(55%);
   position: relative;
 }
 .main__div .first--menu--text:hover .circle {
@@ -516,7 +518,7 @@ footer .footer__contacts > i {
 }
 .main__div .first--menu--text:hover .price {
   transition: 1s;
-  transform: translateX(1px);
+  transform: translateX(-1px);
 }
 .main__div .price {
   font-weight: bold;
@@ -553,6 +555,10 @@ footer .footer__contacts > i {
 @media screen and (max-width: 1000px) {
   .main__div .orderb {
     margin-left: 25%;
+  }
+  .main__div .orderb .price {
+    transform: translateX(10px);
+    margin: 5%;
   }
 }
 .main__div .first--menu:nth-child(1n) {
