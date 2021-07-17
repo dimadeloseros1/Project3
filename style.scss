@@ -71,14 +71,14 @@ body {
   grid-template-columns: 7rem 3rem;
   justify-content: center;
   grid-gap: 5%;
-  padding: 4%;
+  padding: 2%;
 }
 
 .location {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5%;
+  gap: 1%;
   white-space: nowrap;
   font-weight: 700;
   background: linear-gradient(180deg, #a7a7a7 0%, #e2e2e2 15%);
@@ -277,7 +277,7 @@ nav {
 footer {
   background: darken($color: #fff, $amount: 70%);
   color: #fff;
-  margin: 40px 0px;
+  
 
   >h1 {
     margin: 2%;
@@ -289,8 +289,8 @@ footer {
   }
 
   .footer {
-    font-size: 1.5rem;
-    margin: 20px;
+    font-size: 1.3rem;
+    
 
     &__contacts {
       display: flex;
@@ -516,6 +516,7 @@ footer {
         transform: translateX(10px);
         margin: 5%;
       }
+     
     }
   }
 
