@@ -351,7 +351,7 @@ footer {
   color: #fff;
 }
 footer > h1 {
-  margin: 2%;
+  margin-bottom: 1%;
 }
 footer #con {
   text-decoration: none;
@@ -537,6 +537,7 @@ footer .footer__contacts > i {
   background: linear-gradient(#ff79da 40%, #9356DC 100%);
   font-size: 100%;
   transition: 1s ease-in;
+  margin-bottom: 10px;
   margin-left: 45%;
   z-index: 0;
 }
