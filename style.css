@@ -610,8 +610,13 @@ footer .footer__contacts > i {
   -webkit-animation-delay: 5.6s;
           animation-delay: 5.6s;
 }
+.main__div .first--menu:nth-child(15n) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
 .main__div .footer1 {
   padding: 2%;
   position: relative;
   margin: 40px;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

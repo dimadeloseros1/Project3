@@ -520,7 +520,7 @@ footer {
     }
   }
 
-  @for $i from 1 through 14 {
+  @for $i from 1 through 15 {
     .first--menu:nth-child(#{$i}n) {
         animation-delay: #{$i * 0.4}s;
     }
@@ -531,7 +531,10 @@ footer {
     padding: 2%;
     position: relative;
     margin: 40px;
-
+    text-decoration: none;
+   
+    
   }
+  
 
 }
