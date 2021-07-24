@@ -517,8 +517,8 @@ footer .footer__contacts > i {
   transition: 1s;
   transform: translateX(65px);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  margin: 2%;
 }
 .main__div h4::after {
   content: "";
